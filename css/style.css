@@ -679,8 +679,26 @@ p {
   position: relative;
   z-index: 0; }
   @media screen and (max-width: 768px) {
+    .colorlib-services .services {
+        min-height: 28em;
+    }
     .services {
-      margin-bottom: 4em; } }
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0em;
+    }
+    .services h3 {
+      margin-left: 1em;
+    }
+    .services .desc {
+      margin-top: 0px !important;
+    }
+    .hire {
+      text-align: center;
+    }
+  }
   .services .icon {
     position: absolute;
     top: -20px;
@@ -947,18 +965,31 @@ p {
   .work-menu span:first-child {
     margin-left: 0; }
   .work-menu span a {
-    color: #000; }
+    color: #000; 
+    cursor:pointer;
+    }
     .work-menu span a.active {
       color: #22eaaa; }
 
+
+.workWeb, .workDesign, .workForm{
+  display: none;
+}
+
+.workWeb.active, .workDesign.active, .workForm.active{
+  display: block;
+}
+
 .project {
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   height: 300px;
   width: 100%;
   display: block;
+  background-color: #F8F8F8;
+  border: thin solid #22eaaa;
   margin-bottom: 30px; }
   .project .desc {
     position: absolute;
@@ -1028,7 +1059,7 @@ p {
         color: #000; }
     @media screen and (max-width: 768px) {
       .project .desc {
-        opacity: 1;
+        opacity: 0;
         background: rgba(0, 0, 0, 0.4); }
         .project .desc h3 {
           font-style: 28px;

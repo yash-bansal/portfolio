@@ -308,3 +308,10 @@
 
 
 }());
+
+function showHideWork(target){
+	$('.work').removeClass('active');
+	$('.'+target).addClass('active');
+	$('.workTab').removeClass('active');
+	$('.'+target+'Tab').addClass('active');
+}
